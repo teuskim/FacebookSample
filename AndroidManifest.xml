@@ -1,0 +1,115 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.teuskim.facebooksample"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:name="com.teuskim.facebooksample.FacebookSampleApplication" 
+        >
+        <activity android:name="com.teuskim.facebooksample.MainActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.teuskim.facebooksample.friendpicker.FriendPickerSampleActivity"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity android:name="com.teuskim.facebooksample.friendpicker.PickFriendsActivity"
+                  android:label="Pick Friends">
+        </activity>
+        <activity android:name="com.facebook.LoginActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:label="@string/app_name" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+        
+        
+        <activity
+            android:name="com.teuskim.facebooksample.graphapi.GraphApiSampleActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        
+        
+        <activity android:name="com.teuskim.facebooksample.hellofacebook.HelloFacebookSampleActivity"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="adjustResize">
+        </activity>
+        <provider android:authorities="com.facebook.app.NativeAppCallContentProvider671141116291685"
+                  android:name="com.facebook.NativeAppCallContentProvider"
+                  android:exported="true"/>
+        <receiver android:name="com.teuskim.facebooksample.hellofacebook.HelloFacebookBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.platform.AppCallResultBroadcast" />
+            </intent-filter>
+        </receiver>
+        
+        
+        <activity android:name="com.teuskim.facebooksample.placepicker.PlacePickerSampleActivity"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity android:name="com.teuskim.facebooksample.placepicker.PickPlaceActivity"
+                  android:label="Pick Place">
+        </activity>
+        
+        
+        <activity
+                android:name="com.teuskim.facebooksample.profilepicture.ProfilePictureSampleActivity"
+                android:label="@string/app_name"
+                android:windowSoftInputMode="adjustResize">
+        </activity>
+        
+        
+        <activity android:name="com.teuskim.facebooksample.rps.RpsActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"
+                  android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity android:name="com.teuskim.facebooksample.rps.FriendActivity"
+                  android:label="@string/app_name" />
+        
+        
+        <activity android:name="com.teuskim.facebooksample.scrumptious.ScrumptiousActivity"
+                  android:label="@string/app_name"
+                  android:theme="@style/Theme.Scrumptious"
+                  android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity android:name="com.teuskim.facebooksample.scrumptious.PickerActivity"
+                  android:label="@string/app_name" />
+        
+        
+        <activity
+            android:name="com.teuskim.facebooksample.sessionlogin.SessionLoginSampleActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
+                android:name="com.teuskim.facebooksample.sessionlogin.LoginUsingActivityActivity">
+        </activity>
+        <activity
+                android:name="com.teuskim.facebooksample.sessionlogin.LoginUsingCustomFragmentActivity">
+        </activity>
+        <activity android:name="com.teuskim.facebooksample.sessionlogin.LoginUsingLoginFragmentActivity"/>
+        
+        
+        <activity android:name="com.teuskim.facebooksample.switchuser.SwitchUserActivity"
+                  android:label="@string/app_name"
+                  android:windowSoftInputMode="adjustResize">
+        </activity>
+        
+    </application>
+
+</manifest>
